@@ -1,12 +1,12 @@
 import tkinter as tk
-from tkinter import messagebox, ttk
 import random
 from functools import partial
 import webbrowser
 import time
 
 
-class Game: # Створення класу
+# =-=-=-= СТВОРЕННЯ КЛАСУ =-=-=-=
+class Game:
     def __init__(self, root):
         self.root = root
         self.root.title("Морський бій")
@@ -186,6 +186,34 @@ class Game: # Створення класу
             fg="white"
         )
         go2.pack(side=tk.LEFT, padx=10)
+
+        button_frame3 = tk.Frame(frame)
+        button_frame3.pack(pady=10)
+
+        go3 = tk.Button(
+            button_frame3,
+            text="Презентація →",
+            font=("Arial", 14),
+            command=lambda: webbrowser.open(
+                "https://docs.google.com/presentation/d/1Oxf46naBlp-bQ7loUpDzCnZ0415qihTb/edit?usp=sharing&ouid=101339484759200254768&rtpof=true&sd=true"),
+            bg="#2196F3",
+            fg="white"
+        )
+        go3.pack(side=tk.LEFT, padx=10)
+
+        button_frame4 = tk.Frame(frame)
+        button_frame4.pack(pady=10)
+
+        go4 = tk.Button(
+            button_frame4,
+            text="Зворотній зв'язок →",
+            font=("Arial", 14),
+            command=lambda: webbrowser.open(
+                "https://t.me/ArtemKirss"),
+            bg="#2196F3",
+            fg="white"
+        )
+        go4.pack(side=tk.LEFT, padx=10)
 
         back = tk.Button(
             self.root,
